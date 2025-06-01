@@ -167,6 +167,49 @@ You can pass a query parameter `&hide=` to hide any specific stats with comma-se
 <!--Replace <username> with your own GitHub username.-->
 https://pixel-profile.vercel.app/api/github-stats?username=<username>&hide=rank
 ```
-![Hiding individual stats](./packages/pixel-profile/test/__image_snapshots__/github-stats-test-ts-packages-pixel-profile-test-github-stats-test-ts-github-stats-render-card-without-rank-with-theme-1-snap.png)
 
 
+### Project directory structure
+
+```
+pixel-profile/
+├── action/                      # GitHub Action-related logic
+│   ├── action.yml
+│   ├── index.ts
+│   ├── parseOutputs.ts
+│   └── libs/
+├── api/                         # API handler
+│   └── handle.ts
+├── Dockerfile                   # Docker configuration file
+├── LICENSE
+├── package.json                 # Root package manifest
+├── pnpm-lock.yaml               # pnpm dependency lock file
+├── pnpm-workspace.yaml          # pnpm workspace configuration
+├── README.md
+├── tsconfig.json                # TypeScript configuration
+├── turbo.json                   # TurboRepo configuration
+├── vercel.json                  # Vercel deployment configuration
+├── vitest.config.ts             # Vitest testing configuration
+├── venv/                        # (Local Python environment folder, can be deleted if unnecessary)
+│
+└── packages/                    # Main code packages
+    ├── pixel-profile/           # Frontend / UI generation logic
+    │   ├── fonts/               # Font resources
+    │   ├── img/                 # Image resources
+    │   ├── src/                 # Source code
+    │   ├── test/                # Test code
+    │   └── ...
+    ├── pixel-profile-server/   # Backend API logic
+    │   ├── src/
+    │   └── ...
+    └── utils/                   # Shared utility functions
+        ├── src/
+        └── ...
+```
+
+### How to finish and exit a run
+
+ ~# Ctrl + c
+ and close the browser
+
+ 
