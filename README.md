@@ -212,4 +212,7 @@ pixel-profile/
  ~# Ctrl + c
  and close the browser
 
+
+ License: MIT License
+
  
