@@ -78,68 +78,92 @@ Added the ability to display the top three most used languages in Github.
 ### **How to install & Run**
 
 1. run docker image & enter container shell
-  docker run -p 3000:3000 -it final_2023040017:v1
+  ```
+  docker run -p 10277:10277 -it final_2023040017:v1
+  ```
 
-2. move to project directory
+3. move to project directory
+   ```
    cd ~
    ~# cd pixel-profile
-
-3. run server
-   ~# node --experimental-modules packages/pixel-profile-server/dist/node.js
-4. Enter the url below into your browser
-   ```html
-   https://api/github-stats?username=<your-github-username>&theme=lex
    ```
 
-6. you can select other themes or hide stats.
+4. run server
+   ```
+   # node --experimental-modules packages/pixel-profile-server/dist/node.js
+   ```
+   
+   - If you encounter an error, please navigate to the following directory and install tsup:
+
+    ```
+   cd packages/pixel-profile-server  
+   pnpm add -D tsup
+    ```
+    
+   - Then, go to the project root folder and rebuild the project:
+    ```
+   cd pixel-profile/  
+   pnpm run -r build
+   node --experimental-modules packages/pixel-profile-server/dist/node.js
+    ```
+    
+5. Enter the url below into your browser
+
+   ```
+   http://203.255.81.___:10277/api/github-stats?username=<your-github-username>&theme=lex
+   ```
+   (The port number is hidden for security purposes. Please enter the port number of the training server you’ve been assigned.)
+   (Only HTTP is supported. Please do not use HTTPS.)
+
+7. you can select other themes or hide stats.
 
 #### 1. without pixelated effect
 ![Journey](./packages/pixel-profile/test/__image_snapshots__/theme-test-ts-theme-render-card-with-journey-theme-1-snap.png)
 ```html
-https://pixel-profile.vercel.app/api/github-stats?username=<username>&theme=journey&pixelate_avatar=false
+http://203.255.81.___:10277/api/github-stats?username=<username>&theme=journey&pixelate_avatar=false
 ```
 #### With dithering.
 The `dithering=true` configuration is a standalone setting that can be applied to any theme.
 
 ![Journey](./packages/pixel-profile/test/__image_snapshots__/theme-test-ts-theme-render-card-with-journey-theme-and-dithering-1-snap.png)
 ```html
-https://pixel-profile.vercel.app/api/github-stats?username=<username>&theme=journey&dithering=true&hide=avatar
+http://203.255.81.___:10277/api/github-stats?username=<username>&theme=journey&dithering=true&hide=avatar
 ```
 
 #### 2. Road trip without pixelated avatar.
 ![Road Trip](./packages/pixel-profile/test/__image_snapshots__/theme-test-ts-theme-render-card-with-road-trip-theme-1-snap.png)
 ```html
-https://pixel-profile.vercel.app/api/github-stats?username=<username>&theme=road_trip&pixelate_avatar=false
+http://203.255.81.___:10277/api/github-stats?username=<username>&theme=road_trip&pixelate_avatar=false
 ```
 
 #### 3. Fuji Theme
 ![Fuji](./packages/pixel-profile/test/__image_snapshots__/theme-test-ts-theme-render-card-with-fuji-theme-1-snap.png)
 ```html
-https://pixel-profile.vercel.app/api/github-stats?username=<username>&theme=fuji
+http://203.255.81.___:10277/api/github-stats?username=<username>&theme=fuji
 ```
 
 #### 4. Rainbow Theme
 ![Rainbow](./packages/pixel-profile/test/__image_snapshots__/theme-test-ts-theme-render-card-with-rainbow-theme-1-snap.png)
 ```html
-https://pixel-profile.vercel.app/api/github-stats?username=<username>&theme=rainbow
+http://203.255.81.___:10277/api/github-stats?username=<username>&theme=rainbow
 ```
 
 #### 5. Monica Theme
 ![Monica](./packages/pixel-profile/test/__image_snapshots__/theme-test-ts-theme-render-card-with-monica-theme-1-snap.png)
 ```html
-https://pixel-profile.vercel.app/api/github-stats?username=<username>&theme=monica
+https://203.255.81.___:10277/api/github-stats?username=<username>&theme=monica
 ```
 
 #### 6. Summer Theme
 ![Summer](./packages/pixel-profile/test/__image_snapshots__/theme-test-ts-theme-render-card-with-summer-theme-1-snap.png)
 ```html
-https://pixel-profile.vercel.app/api/github-stats?username=<username>&theme=summer
+http://203.255.81.___:10277/api/github-stats?username=<username>&theme=summer
 ```
 
 #### 7. Lax Theme
 ![Lax](./packages/pixel-profile/test/__image_snapshots__/theme-test-ts-theme-render-card-with-lax-theme-1-snap.png)
 ```html
-https://pixel-profile.vercel.app/api/github-stats?username=<username>&theme=lax
+http://203.255.81.___:10277/api/github-stats?username=<username>&theme=lax
 ```
 
 
