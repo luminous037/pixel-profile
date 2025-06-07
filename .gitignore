@@ -17,3 +17,9 @@ vercel_token
 
 dist
 __diff_output__/
+
+# macOS
+.DS_Store
+# Python
+venv/
+python3.12/
