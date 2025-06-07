@@ -75,11 +75,18 @@ Added the ability to display the top three most used languages in Github.
   
   bumpp@9.3.0
 
-### **How to install & Run**
+### **How to install**
+
+1. Install docker iamge from Docker hub
+```
+docker pull yosi003/final_2023040017:v1
+```
+
+### **How to Run**
 
 1. run docker image & enter container shell
   ```
-  docker run -p 10277:10277 -it final_2023040017:v1
+  docker run -p 10277:10277 -it yosi003/final_2023040017:v1
   ```
 
 3. move to project directory
