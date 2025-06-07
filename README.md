@@ -120,6 +120,7 @@ docker pull yosi003/final_2023040017:v1
    http://203.255.81.___:10277/api/github-stats?username=<your-github-username>&theme=lex
    ```
    (The port number is hidden for security purposes. Please enter the port number of the training server you’ve been assigned.)
+   (Please modify username=<your-github-username> to your github user name)
    (Only HTTP is supported. Please do not use HTTPS.)
 
 7. you can select other themes or hide stats.
